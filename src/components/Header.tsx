@@ -22,14 +22,14 @@ export const Header: React.FC = () => {
 
         <a
           href="/test"
-          className={`${styles.btn} ${styles["btn-white"]} ${styles.strong}`}
+          className={`${styles.btn} ${styles["btn-white"]} ${styles.strong} ${styles["btn-animated"]}`}
         >
           Solicite um orçamento
         </a>
 
         <a
           href="/test"
-          className={`${styles.btn} ${styles["btn-white"]} ${styles.strong}`}
+          className={`${styles.btn} ${styles["btn-white"]} ${styles.strong} ${styles["btn-animated"]}`}
         >
           Nossos serviços
         </a>

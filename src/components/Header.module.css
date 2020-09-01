@@ -10,12 +10,12 @@
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 150px;
+  height: 15rem;
 }
 
 .text-box {
@@ -30,16 +30,16 @@
   text-transform: uppercase;
 
   backface-visibility: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 700;
-  letter-spacing: 16.5px;
+  letter-spacing: 1.65rem;
   line-height: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -48,7 +48,7 @@
 
 .heading-primary-sub {
   display: block;
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 500;
   line-height: 100%;
 
@@ -64,11 +64,11 @@
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-20%);
+    transform: translateX(-2rem);
   }
 
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
 
   100% {
@@ -80,11 +80,11 @@
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(20%);
+    transform: translateX(2rem);
   }
 
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
 
   100% {
@@ -93,26 +93,52 @@
   }
 }
 
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  80% {
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 20px 40px;
+  padding: 2rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.2s;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
   transform: translateY(-5%);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
   transform: translateY(-1%);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .btn-white {
   background-color: #fff;
   color: #777;
-  margin-right: 20px;
+  margin-right: 2rem;
+}
+
+.btn-animated {
+  animation-name: moveInBottom;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: backwards;
 }
