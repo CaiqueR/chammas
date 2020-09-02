@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
-import { Header } from "../components/Header";
+import { Header } from "../components/Header/Header";
+import { Section } from "../components/Section/Section";
 
 const Home: React.FC = () => {
   return (
@@ -11,6 +12,9 @@ const Home: React.FC = () => {
       </Head>
 
       <Header />
+      <main>
+        <Section />
+      </main>
     </div>
   );
 };
