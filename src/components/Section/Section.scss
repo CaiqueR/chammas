@@ -1,6 +1,7 @@
 .section-about {
   background-color: $color-grey-light;
-  padding: 30rem 0;
+  padding: 30rem;
+  padding-bottom: 50rem;
   margin-top: -20vh;
 }
 
@@ -116,7 +117,7 @@
     ),
     url("../../assets/img/mineracao.jpg");
   background-size: cover;
-  // margin-top: 3rem;
+  margin-top: -15rem;
 
   transform: skewY(-7deg);
 
