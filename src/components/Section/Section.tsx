@@ -20,10 +20,10 @@ export const Section: React.FC = () => {
               guiada pela excelência técnica, o nome Chammas é referência em
               Geotecnia. Hoje, somos 250 pessoas comprometidas com a extração de
               dados geotécnicos, com altíssimo rigor técnico e utilização das
-              melhores tecnologias disponíveis no mundo. A Geotecnia é nosso
-              universo, e somos implacáveis na busca por métodos e tecnologias
-              que garantam maior agilidade, qualidade, confiabilidade e
-              inteligência para os dados geotécnicos.
+              melhores tecnologias disponíveis no mundo. <br />
+              <br />A Geotecnia é nosso universo, e somos implacáveis na busca
+              por métodos e tecnologias que garantam maior agilidade, qualidade,
+              confiabilidade e inteligência para os dados geotécnicos.
             </p>
           </div>
           <div className="col-1-of-2">
@@ -56,9 +56,8 @@ export const Section: React.FC = () => {
         <div className="row">
           <div className="col-1-of-4">
             <Card
-              details="oi"
-              heading="oi2"
-              picture={null}
+              heading="Investigações Geotécnicas de Campo"
+              details="Sondagens mistas, CPTu, SCPTu, VST, DMT, SDMT, PMT e vários outros tipos de Investigações Geotécnicas de Campo."
               backSide={<>Oi2</>}
               color="1"
             />
@@ -66,26 +65,50 @@ export const Section: React.FC = () => {
 
           <div className="col-1-of-4">
             <Card
-              details="oi"
-              heading="oi2"
-              picture={null}
+              heading="Ensaios Geotécnicos de Laboratório"
+              details={
+                <>
+                  O mais completo Laboratório de Geotecnica do Brasil. <br />{" "}
+                  Ensaios de caracterização de solos e especiais.
+                </>
+              }
               backSide={<>Oi2</>}
-              color="1"
+              color="2"
             />
           </div>
 
           <div className="col-1-of-4">
             <Card
-              details="oi"
-              heading="oi2"
-              picture={null}
+              heading="Controle Geotécnico"
+              details={
+                <>
+                  Controle Geotécnico de estruturas, como pilhas de rejeito e
+                  barragens. <br />
+                  Controle geotécnico ágil, monitorado em tempo real, garantindo
+                  a máxima qualidade e gerenciamento.
+                </>
+              }
               backSide={<>Oi2</>}
-              color="1"
+              color="3"
             />
           </div>
 
           <div className="col-1-of-4">
-            <Card frontSide={<>Oi</>} backSide={<>Oi2</>} color="1" />
+            <Card
+              heading="Instrumentação Geotécnica"
+              details={
+                <>
+                  Instalação de instrumentos elétricos, analógicos e/ou
+                  digitais, tais como piezômetros, inclinômetors, placas de
+                  recalque, medidores de vazão, extensômetros, medidores de
+                  nível e outros. <br />
+                  Elaboração de arquitetura de rede para automação de
+                  monitoramento geotécnico.
+                </>
+              }
+              backSide={<>Oi2</>}
+              color="4"
+            />
           </div>
         </div>
       </section>
