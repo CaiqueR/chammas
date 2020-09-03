@@ -25,12 +25,8 @@ export const Card: React.FC<ICard> = ({
       </div>
       <div className={`card__side card__side--back card__side--back-${color}`}>
         <div className="card__cta">
-          <div className="card__price-box">
-            <p className="card__price-only">{backSide}</p>
-            <p className="card__price-value">$297</p>
-          </div>
           <a href="/" className="btn btn-white">
-            Veja agora
+            Saiba mais
           </a>
         </div>
       </div>

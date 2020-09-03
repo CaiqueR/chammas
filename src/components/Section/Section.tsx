@@ -58,7 +58,7 @@ export const Section: React.FC = () => {
             <Card
               heading="Investigações Geotécnicas de Campo"
               details="Sondagens mistas, CPTu, SCPTu, VST, DMT, SDMT, PMT e vários outros tipos de Investigações Geotécnicas de Campo."
-              backSide={<>Oi2</>}
+              backSide={<>Somente por</>}
               color="1"
             />
           </div>
@@ -72,7 +72,7 @@ export const Section: React.FC = () => {
                   Ensaios de caracterização de solos e especiais.
                 </>
               }
-              backSide={<>Oi2</>}
+              backSide={<>Somente por</>}
               color="2"
             />
           </div>
@@ -88,7 +88,7 @@ export const Section: React.FC = () => {
                   a máxima qualidade e gerenciamento.
                 </>
               }
-              backSide={<>Oi2</>}
+              backSide={<>Somente por</>}
               color="3"
             />
           </div>
@@ -106,7 +106,7 @@ export const Section: React.FC = () => {
                   monitoramento geotécnico.
                 </>
               }
-              backSide={<>Oi2</>}
+              backSide={<>Somente por</>}
               color="4"
             />
           </div>
