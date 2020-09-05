@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useCallback, FormEvent } from "react";
 
 import image1 from "../../assets/img/image1.jpg";
 import image2 from "../../assets/img/image2.jpg";
@@ -6,6 +7,10 @@ import image3 from "../../assets/img/image3.jpg";
 import { Card } from "../Card/Card";
 
 export const Section: React.FC = () => {
+  const sendCurriculumForm = useCallback((e: FormEvent) => {
+    e.preventDefault();
+  }, []);
+
   return (
     <>
       <section className="section-about">
@@ -149,6 +154,90 @@ export const Section: React.FC = () => {
                 Segunda a Sexta: <strong>08:00</strong> às{" "}
                 <strong>17:00</strong>
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-curriculum">
+        <div className="row">
+          <div className="curriculum">
+            <div className="curriculum__form">
+              <h2 className="heading-secondary u-margin-bottom-small">
+                Trabalhe conosco
+              </h2>
+              <form action="#" className="form">
+                <div className="form__group">
+                  <input
+                    type="text"
+                    className="form__input"
+                    placeholder="Nome completo"
+                    id="name"
+                    required
+                  />
+                  <label htmlFor="name" className="form__label">
+                    Nome completo
+                  </label>
+                </div>
+
+                <div className="form__group">
+                  <input
+                    type="email"
+                    className="form__input"
+                    placeholder="Email"
+                    id="email"
+                    required
+                  />
+                  <label htmlFor="email" className="form__label">
+                    Email
+                  </label>
+                </div>
+
+                <div className="form__group">
+                  <input
+                    type="tel"
+                    className="form__input"
+                    placeholder="Telefone"
+                    id="telefone"
+                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                    required
+                  />
+                  <label htmlFor="telefone" className="form__label">
+                    Telefone
+                  </label>
+                </div>
+
+                <div className="form__group">
+                  <input
+                    type="file"
+                    className="form__input"
+                    placeholder="Currículo"
+                    id="curriculo"
+                    required
+                  />
+                  <label htmlFor="curriculo" className="form__label">
+                    Currículo
+                  </label>
+                </div>
+
+                <div className="form__group">
+                  <textarea
+                    id="mensagem"
+                    className="form__textarea"
+                    name="mensagem"
+                    defaultValue="Escreva um breve resumo sobre você"
+                  />
+
+                  <label htmlFor="mensagem" className="form__label">
+                    Mensagem
+                  </label>
+                </div>
+                <div className="form__group">
+                  <button type="submit" className="btn btn-orange strong">
+                    Enviar
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
