@@ -172,8 +172,8 @@
 .curriculum {
   background-image: linear-gradient(
       105deg,
-      rgba($color-white, 0.9) 55%,
-      transparent 55%
+      rgba($color-white, 0.9) 60%,
+      transparent 60%
     ),
     url(../../assets/img/mining5.jpg);
   background-size: 100%;
@@ -183,7 +183,7 @@
   height: 75rem;
 
   &__form {
-    width: 58%;
+    width: 60%;
     padding: 6rem;
   }
 }
