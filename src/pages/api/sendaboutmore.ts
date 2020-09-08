@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
 });
 
 export default async (req, res) => {
-  const { email, subject, message, name, attachment, phone } = req.body;
+  const { email, subject, message, name, phone } = req.body;
 
   if (!email || !subject || !message || !name || !phone) {
     return res.json({ error: "Email or subject or message not filled" });
@@ -21,7 +21,6 @@ export default async (req, res) => {
     subject,
     html: `<p>Email: ${email}</p>
     <p>${message}</p>`,
-    attachments: [{ filename: "Currículo.pdf", path: attachment }],
   });
 
   return res.json(response);

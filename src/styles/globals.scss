@@ -18,3 +18,8 @@
 @import "../components/Footer/Footer";
 @import "../components/Navigation/Navigation";
 @import "../components/Dialog/Dialog";
+
+.Toastify__toast-body {
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+}

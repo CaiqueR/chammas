@@ -1,5 +1,4 @@
 import React, { useState, useCallback, MouseEvent } from "react";
-import axios from "axios";
 
 import logo from "../../assets/img/logo-white.png";
 import { Dialog } from "../Dialog/Dialog";
@@ -50,16 +49,6 @@ export const Header: React.FC = () => {
           <a
             href="#section-services"
             className="btn btn-white strong btn-animated"
-            onClick={(e) => {
-              e.preventDefault();
-              const formData = new FormData();
-              formData.append("image", logo);
-              axios.post("api/sendmail", formData, {
-                headers: {
-                  "Content-Type": "multipart/form-data",
-                },
-              });
-            }}
           >
             Nossos serviços
           </a>

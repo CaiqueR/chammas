@@ -1,17 +1,24 @@
 .section-about {
   background-color: $color-grey-light;
   padding: 20rem;
+  margin-top: -20vh;
+
+  padding-bottom: 40rem;
 
   @include respond(big-desktop) {
-    padding-bottom: 50rem;
+    padding-bottom: 40rem;
   }
 
-  margin-top: -20vh;
+  @include respond(tab-land) {
+    padding-bottom: 30rem;
+  }
+
   @include respond(tab-port) {
     padding: 20rem 0;
     margin-top: -15vh;
     padding-bottom: 20rem;
   }
+
   @include respond(phone) {
     padding: 18rem 0 18rem 0;
   }

@@ -1,5 +1,15 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { MouseEvent } from "react";
+import React, {
+  MouseEvent,
+  useRef,
+  useState,
+  useCallback,
+  FormEvent,
+} from "react";
+import { toast } from "react-toastify";
+import Loader from "react-loader-spinner";
+import axios from "axios";
+
 import photo1 from "../../assets/img/mining4.jpg";
 import photo2 from "../../assets/img/mining5.jpg";
 
@@ -15,6 +25,33 @@ export const Dialog: React.FC<DialogProps> = ({
   description,
   closeDialog,
 }) => {
+  const name = useRef<HTMLInputElement>(null);
+  const email = useRef<HTMLInputElement>(null);
+  const phone = useRef<HTMLInputElement>(null);
+  const message = useRef<HTMLTextAreaElement>(null);
+  const form = useRef<HTMLFormElement>(null);
+
+  const [isLoading, setIsLoading] = useState(false);
+  const sendForm = useCallback(async (e: FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      await axios.post("api/sendaboutmore", {
+        name: name.current.value,
+        email: email.current.value,
+        message: message.current.value,
+        phone: phone.current.value,
+        subject: "Saber mais",
+      });
+      setIsLoading(false);
+      form.current.reset();
+      toast.success("Sua mensagem foi enviada com sucesso!");
+    } catch {
+      setIsLoading(false);
+    }
+  }, []);
+
   return (
     <div className={`dialog ${opened ? "dialog__opened" : ""}`} id="dialog">
       <div className="dialog__content">
@@ -37,7 +74,7 @@ export const Dialog: React.FC<DialogProps> = ({
             {description ||
               "Envie-nos uma mensagem com o assunto que gostaria de saber mais."}
           </h2>
-          <form action="#" className="form">
+          <form action="#" className="form" onSubmit={sendForm} ref={form}>
             <div className="form__group">
               <input
                 type="text"
@@ -45,6 +82,7 @@ export const Dialog: React.FC<DialogProps> = ({
                 placeholder="Nome completo"
                 id="name"
                 required
+                ref={name}
               />
               <label htmlFor="name" className="form__label">
                 Nome completo
@@ -58,6 +96,7 @@ export const Dialog: React.FC<DialogProps> = ({
                 placeholder="Email"
                 id="email"
                 required
+                ref={email}
               />
               <label htmlFor="email" className="form__label">
                 Email
@@ -70,8 +109,9 @@ export const Dialog: React.FC<DialogProps> = ({
                 className="form__input form__input-shadow"
                 placeholder="Telefone"
                 id="telefone"
-                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                // pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                 required
+                ref={phone}
               />
               <label htmlFor="telefone" className="form__label">
                 Telefone
@@ -84,6 +124,7 @@ export const Dialog: React.FC<DialogProps> = ({
                 className="form__textarea form__input-shadow form__textarea-full"
                 name="mensagem"
                 defaultValue="Digite uma mensagem"
+                ref={message}
               />
 
               <label htmlFor="mensagem" className="form__label">
@@ -91,9 +132,18 @@ export const Dialog: React.FC<DialogProps> = ({
               </label>
             </div>
             <div className="form__group">
-              <button type="submit" className="btn btn-orange strong">
+              <button
+                type="submit"
+                className="btn btn-orange strong"
+                disabled={isLoading}
+              >
                 Enviar
               </button>
+              {isLoading && (
+                <div style={{ display: "inline-block" }}>
+                  <Loader type="Oval" color="#000" height={20} width={30} />
+                </div>
+              )}
             </div>
           </form>
         </div>
