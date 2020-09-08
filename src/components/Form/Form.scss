@@ -2,6 +2,9 @@
   &__input,
   &__textarea {
     font-size: 1.5rem;
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
     font-family: inherit;
     color: inherit;
     padding: 1.5rem 2rem;
