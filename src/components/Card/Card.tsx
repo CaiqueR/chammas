@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useCallback, MouseEvent, useState } from "react";
+import { Dialog } from "../Dialog/Dialog";
 
 interface ICard {
   backSide: JSX.Element;
@@ -25,7 +26,7 @@ export const Card: React.FC<ICard> = ({
       </div>
       <div className={`card__side card__side--back card__side--back-${color}`}>
         <div className="card__cta">
-          <a href="/" className="btn btn-white">
+          <a href="#dialog" className="btn btn-white">
             Saiba mais
           </a>
         </div>

@@ -15,7 +15,9 @@ export const Section: React.FC = () => {
     <>
       <section className="section-about">
         <div className="u-text-center u-margin-bottom-big">
-          <h2 className="heading-secondary">Quem Somos</h2>
+          <h2 className="heading-secondary" id="section-about">
+            Quem Somos
+          </h2>
         </div>
 
         <div className="row">
@@ -55,7 +57,9 @@ export const Section: React.FC = () => {
 
       <section className="section-features">
         <div className="u-text-center u-margin-bottom-big">
-          <h2 className="heading-secondary white">Serviços Geotécnicos</h2>
+          <h2 className="heading-secondary white" id="section-services">
+            Serviços Geotécnicos
+          </h2>
         </div>
 
         <div className="row">
@@ -118,7 +122,7 @@ export const Section: React.FC = () => {
         </div>
       </section>
 
-      <section className="section-tours">
+      <section className="section-contact" id="section-contact">
         <div className="u-text-center u-margin-bottom-big">
           <h2 className="heading-secondary">Contato</h2>
         </div>
@@ -159,8 +163,8 @@ export const Section: React.FC = () => {
         </div>
       </section>
 
-      <section className="section-curriculum">
-        <div className="row">
+      <section className="section-curriculum" id="section-curriculum">
+        <div className="row remove-padding">
           <div className="curriculum">
             <div className="curriculum__form">
               <h2 className="heading-secondary u-margin-bottom-small">

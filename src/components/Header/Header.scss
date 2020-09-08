@@ -1,5 +1,6 @@
 .header {
   height: 95vh;
+  width: 100%;
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.8),
@@ -9,6 +10,11 @@
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0% 100%);
+
+  @include respond(tab-port) {
+    height: 85vh;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+  }
   position: relative;
 
   &__logo-box {
@@ -27,6 +33,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
   }
 }
 
@@ -44,6 +54,11 @@
     letter-spacing: 1.65rem;
     line-height: 100%;
     margin-bottom: 2rem;
+
+    @include respond(phone) {
+      font-size: 5rem;
+      letter-spacing: 1rem;
+    }
 
     animation-name: moveInLeft;
     animation-duration: 1s;

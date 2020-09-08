@@ -17,6 +17,16 @@
 
     cursor: pointer;
 
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 3rem;
+      right: 3rem;
+    }
+
     &:hover {
       .navigation__icon::before {
         top: -1rem;
@@ -42,6 +52,16 @@
 
     z-index: 1000;
     transition: all 0.6s;
+
+    @include respond(tab-port) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
 
   &__nav {

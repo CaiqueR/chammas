@@ -5,3 +5,54 @@
     clear: both;
   }
 }
+@mixin back-side-picture-default {
+  background-image: linear-gradient(
+    to right bottom,
+    $color-secondary-light,
+    $color-secondary-dark
+  );
+}
+
+@mixin heading-span-default {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-primary-light, 0.85),
+    rgba($color-primary-dark, 0.85)
+  );
+}
+
+@mixin abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// 1 rem = 16px
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == phone) {
+    // 600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == tab-port) {
+    // 900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == tab-land) {
+    // 1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if ($breakpoint == big-desktop) {
+    // 1800px
+    @media (max-width: 112.5em) {
+      @content;
+    }
+  }
+}
