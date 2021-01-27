@@ -1,30 +1,65 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![chammas](https://i.ibb.co/QvMrbMj/image.png)
 
-## Getting Started
+<p align="center">
+  <a href="https://chammas.now.sh/" target="_blank">
+    <img alt="Chammas" src="https://svgshare.com/i/MKt.svg">
+  </a>
+</p>
 
-First, run the development server:
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/caiquer/chammas?color=%2304D361">
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/caiquer/chammas">
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  <a href="https://www.linkedin.com/in/caiquer/">
+    <img alt="Made by Caique" src="https://img.shields.io/badge/made%20by-Caique Ribeiro-%2304D361">
+  </a>
+	
+  
+  <a href="https://github.com/caiquer/chammas/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/caiquer/chammas">
+  </a>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+   <a href="https://github.com/caiquer/chammas/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/caiquer/chammas?style=social">
+  </a>
+</p>
 
-## Learn More
+## 💻 Sobre o projeto
 
-To learn more about Next.js, take a look at the following resources:
+Chammas Engenharia - é uma landing page feita para empresa Chammas Engenhria.
+Chammas Engenharia é uma aplicação feita para aprender a usar Nextjs e React com Redux e ao mesmo tempo utilizar com o TypeScript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠 Tecnologias
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+As seguintes ferramentas foram usadas na construção do projeto:
 
-## Deploy on Vercel
+- Node.js
+- ReactJS
+- TypeScript
+- NextJs
+- SCSS
+- Styled Components
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Instalação e execução
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Faça um clone desse repositório;
+2. Entre na pasta rodando `cd caique-shoes`;
+3. Execute `yarn` ou `npm install` para instalar as dependências;
+4. Execute `yarn start` ou `npm start` para iniciar a aplicação.
+5. Execute `yarn backend` ou `npm run backend` para iniciar o backend.
+
+## 🤔 Como contribuir para o projeto
+
+1. Faça um **fork** do projeto.
+2. Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
+3. Salve as alterações e crie uma mensagem de commit contando o que você fez: `git commit -m "feature: My new feature"`
+4. Envie as suas alterações: `git push origin my-feature`
+   > Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
+
+## 📝 Licença
+
+Este projeto esta sobe a licença MIT. Veja a [LICENÇA](https://github.com/CaiqueR/chammas/blob/master/LICENSE.md) para saber mais.
+
+Feito com ❤️ por Caique Ribeiro 👋🏽 [Entre em contato!](https://www.linkedin.com/in/caiquer/)
